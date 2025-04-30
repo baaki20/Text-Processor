@@ -22,6 +22,20 @@ public class MainApp {
 
         String inputText = "";
 
+        // Validate pattern
+        String userPattern = "[a-zA-Z]+\\d{2}"; // Example: word followed by exactly 2 digits
+
+        if (regexService.isValidRegex(userPattern)) {
+            LoggerService.info("User-provided regex pattern is valid: " + userPattern);
+
+            List<Map<String, Object>> matchDetails = regexService.getMatchDetails(inputText, userPattern);
+            System.out.println("\nDetailed Match Info:");
+            matchDetails.forEach(detail -> System.out.println(detail));
+
+        } else {
+            LoggerService.warn("Invalid regex pattern provided: " + userPattern);
+        }
+
         // Load sample.txt from classpath
         try (InputStream inputStream = MainApp.class.getClassLoader().getResourceAsStream("sample.txt")) {
             if (inputStream == null) {

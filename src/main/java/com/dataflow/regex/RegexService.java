@@ -2,12 +2,26 @@ package com.dataflow.regex;
 
 import java.util.*;
 import java.util.regex.*;
-import java.util.stream.Collectors;
 
 public class RegexService {
 
     /**
+     * Validates if the given regex pattern is syntactically correct.
+     * @param regexPattern the regex pattern to validate
+     * @return true if valid, false otherwise
+     */
+    public boolean isValidRegex(String regexPattern) {
+        try {
+            Pattern.compile(regexPattern);
+            return true;
+        } catch (PatternSyntaxException e) {
+            return false;
+        }
+    }
+
+    /**
      * Finds all matches of the given regex pattern in the input text.
+     * Supports sets, ranges, alternations, shorthands, and quantifiers.
      * @param inputText the text to search
      * @param regexPattern the regex pattern
      * @return list of matched strings
@@ -46,7 +60,28 @@ public class RegexService {
     public long countMatches(String inputText, String regexPattern) {
         Pattern pattern = Pattern.compile(regexPattern);
         Matcher matcher = pattern.matcher(inputText);
-
         return matcher.results().count();
+    }
+
+    /**
+     * Provides detailed match information (matched text, start index, end index)
+     * @param inputText the text to search
+     * @param regexPattern the regex pattern
+     * @return list of match details
+     */
+    public List<Map<String, Object>> getMatchDetails(String inputText, String regexPattern) {
+        List<Map<String, Object>> details = new ArrayList<>();
+        Pattern pattern = Pattern.compile(regexPattern);
+        Matcher matcher = pattern.matcher(inputText);
+
+        while (matcher.find()) {
+            Map<String, Object> detail = new LinkedHashMap<>();
+            detail.put("Match", matcher.group());
+            detail.put("Start", matcher.start());
+            detail.put("End", matcher.end());
+            details.add(detail);
+        }
+
+        return details;
     }
 }
