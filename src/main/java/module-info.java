@@ -8,6 +8,7 @@ module com.dataflow.com.dataflow.regex {
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.logging;
 
     opens com.dataflow.regex to javafx.fxml;
     exports com.dataflow.regex;

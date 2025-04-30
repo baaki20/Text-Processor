@@ -1,0 +1,32 @@
+Apr 30, 2025 11:55:21 AM com.dataflow.util.LoggerService info
+INFO: Application started.
+Apr 30, 2025 11:55:22 AM com.dataflow.util.LoggerService info
+INFO: 'sample.txt' loaded successfully.
+Apr 30, 2025 11:55:22 AM com.dataflow.util.LoggerService info
+INFO: Regex matches found: 1
+Apr 30, 2025 11:55:22 AM com.dataflow.util.LoggerService info
+INFO: Modified text written to output.txt
+Apr 30, 2025 11:55:22 AM com.dataflow.util.LoggerService info
+INFO: Word frequency computed. Unique words: 18
+Apr 30, 2025 11:55:22 AM com.dataflow.util.LoggerService info
+INFO: Lines matching 'report': 0
+Apr 30, 2025 11:55:22 AM com.dataflow.util.LoggerService info
+INFO: Text summarization complete. Metrics: {Word Count=22, Line Count=3, Character Count=108}
+Apr 30, 2025 11:55:22 AM com.dataflow.util.LoggerService info
+INFO: Application finished.
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: Application started.
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: 'sample.txt' loaded successfully.
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: Regex matches found: 1
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: Modified text written to output.txt
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: Word frequency computed. Unique words: 18
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: Lines matching 'you': 2
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: Text summarization complete. Metrics: {Word Count=22, Line Count=3, Character Count=108}
+Apr 30, 2025 11:57:43 AM com.dataflow.util.LoggerService info
+INFO: Application finished.
