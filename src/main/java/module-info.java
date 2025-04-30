@@ -1,4 +1,4 @@
-module com.dataflow.regex {
+module com.dataflow.com.dataflow.regex {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -9,8 +9,8 @@ module com.dataflow.regex {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens regex to javafx.fxml;
-    exports regex;
+    opens com.dataflow.regex to javafx.fxml;
+    exports com.dataflow.regex;
     exports com.dataflow;
     opens com.dataflow to javafx.fxml;
 }
