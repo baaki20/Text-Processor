@@ -84,3 +84,83 @@ Apr 30, 2025 4:06:54 PM com.dataflow.util.LoggerService info
 INFO: Text summarization complete. Metrics: {Word Count=22, Line Count=3, Character Count=108}
 Apr 30, 2025 4:06:54 PM com.dataflow.util.LoggerService info
 INFO: Application finished.
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: Application started.
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: User-provided regex pattern is valid: [a-zA-Z]+\d{2}
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: 'sample.txt' loaded successfully.
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: Regex matches found: 1
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: Modified text written to output.txt
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: Word frequency computed. Unique words: 18
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: Lines matching 'you': 2
+Apr 30, 2025 4:19:51 PM com.dataflow.util.LoggerService info
+INFO: Text summarization complete. Metrics: {Word Count=22, Line Count=3, Character Count=108}
+Apr 30, 2025 4:19:52 PM com.dataflow.util.LoggerService info
+INFO: Text processing (search & replace) completed.
+Apr 30, 2025 4:19:52 PM com.dataflow.util.LoggerService info
+INFO: Application finished.
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Application started.
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: User-provided regex pattern is valid: [a-zA-Z]+\d{2}
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: 'sample.txt' loaded successfully.
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Regex matches found: 1
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Modified text written to output.txt
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Word frequency computed. Unique words: 20
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Lines matching 'you': 2
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Text summarization complete. Metrics: {Word Count=23, Line Count=3, Character Count=110}
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Text processing (search & replace) completed.
+Apr 30, 2025 4:24:14 PM com.dataflow.util.LoggerService info
+INFO: Application finished.
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Application started.
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: User-provided regex pattern is valid: [a-zA-Z]+\d{2}
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: 'sample.txt' loaded successfully.
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Regex matches found: 1
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Modified text written to output.txt
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Word frequency computed. Unique words: 20
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Lines matching 'you': 2
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Text summarization complete. Metrics: {Word Count=23, Line Count=3, Character Count=111}
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Text processing (search & replace) completed.
+Apr 30, 2025 4:25:26 PM com.dataflow.util.LoggerService info
+INFO: Application finished.
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Application started.
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: User-provided regex pattern is valid: [a-zA-Z]+\d{2}
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: 'sample.txt' loaded successfully.
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Regex matches found: 1
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Modified text written to output.txt
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Word frequency computed. Unique words: 19
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Lines matching 'you': 2
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Text summarization complete. Metrics: {Word Count=22, Line Count=3, Character Count=110}
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Text processing (search & replace) completed.
+Apr 30, 2025 4:25:40 PM com.dataflow.util.LoggerService info
+INFO: Application finished.

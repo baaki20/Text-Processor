@@ -3,6 +3,7 @@ package com.dataflow;
 import com.dataflow.regex.RegexService;
 import com.dataflow.file.FileProcessingService;
 import com.dataflow.stream.StreamProcessingService;
+import com.dataflow.text.TextProcessingService;
 import com.dataflow.util.LoggerService;
 
 import java.io.IOException;
@@ -19,6 +20,7 @@ public class MainApp {
         RegexService regexService = new RegexService();
         FileProcessingService fileProcessingService = new FileProcessingService();
         StreamProcessingService streamProcessingService = new StreamProcessingService();
+        TextProcessingService textProcessingService = new TextProcessingService();
 
         String inputText = "";
 
@@ -72,6 +74,23 @@ public class MainApp {
             Map<String, Long> summary = streamProcessingService.summarizeText(inputText);
             LoggerService.info("Text summarization complete. Metrics: " + summary);
 
+            // === Requirement 6 Demo ===
+            String replacement = "[REDACTED]";
+
+            // a) Search pattern
+            List<Map<String, Object>> matchDetails = textProcessingService.searchPatternInText(inputText, userPattern);
+            System.out.println("\nPattern Search Results:");
+            matchDetails.forEach(System.out::println);
+
+            // b) Replace pattern
+            String modifiedText = textProcessingService.replacePatternInText(inputText, userPattern, replacement);
+            System.out.println("\nModified Text:");
+            System.out.println(modifiedText);
+
+            LoggerService.info("Text processing (search & replace) completed.");
+
+        } catch (IllegalArgumentException e) {
+            LoggerService.error("Regex pattern error", e);
         } catch (Exception e) {
             LoggerService.error("Unexpected error during processing", e);
         }
