@@ -14,8 +14,9 @@ module com.dataflow.com.dataflow.regex {
     opens com.dataflow.controller to javafx.fxml;
     opens com.dataflow.model      to javafx.base, javafx.fxml;
     opens com.dataflow to javafx.fxml;
-    opens com.dataflow.regex to javafx.fxml;
 
     exports com.dataflow;
-    exports com.dataflow.regex;
+    exports com.dataflow.service;
+    opens com.dataflow.service to javafx.fxml;
+    exports com.dataflow.controller;
 }

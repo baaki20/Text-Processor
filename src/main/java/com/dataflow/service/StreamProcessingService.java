@@ -1,7 +1,6 @@
-package com.dataflow.stream;
+package com.dataflow.service;
 
 import java.util.*;
-import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.*;
 

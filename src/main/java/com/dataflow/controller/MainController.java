@@ -1,39 +1,35 @@
 package com.dataflow.controller;
 
-import com.dataflow.file.FileProcessingService;
+import com.dataflow.service.FileProcessingService;
 import com.dataflow.model.TextRecord;
-import com.dataflow.regex.RegexService;
+import com.dataflow.service.RegexService;
 import com.dataflow.service.DataManagementService;
-import com.dataflow.stream.StreamProcessingService;
-import com.dataflow.text.TextProcessingService;
-import com.dataflow.util.LoggerService;
+import com.dataflow.service.StreamProcessingService;
+import com.dataflow.service.TextProcessingService;
+import com.dataflow.util.LoggerUtil;
 
 import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 import javafx.util.Pair;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
-public class RegexAppController implements Initializable {
+public class MainController implements Initializable {
 
     // Services
     private final RegexService regexService = new RegexService();
@@ -146,7 +142,7 @@ public class RegexAppController implements Initializable {
                 setStatus("File loaded: " + selectedFile.getName());
             } catch (IOException e) {
                 showError("Error loading file", e.getMessage());
-                LoggerService.error("Error loading file", e);
+                LoggerUtil.error("Error loading file", e);
             }
         }
     }
@@ -167,7 +163,7 @@ public class RegexAppController implements Initializable {
                 setStatus("File saved: " + selectedFile.getName());
             } catch (IOException e) {
                 showError("Error saving file", e.getMessage());
-                LoggerService.error("Error saving file", e);
+                LoggerUtil.error("Error saving file", e);
             }
         }
     }
@@ -293,7 +289,7 @@ public class RegexAppController implements Initializable {
             } catch (Exception e) {
                 Platform.runLater(() -> {
                     showError("Operation Error", e.getMessage());
-                    LoggerService.error("Error in regex operation", e);
+                    LoggerUtil.error("Error in regex operation", e);
                 });
             } finally {
                 Platform.runLater(() -> showProgress(false));
@@ -314,7 +310,7 @@ public class RegexAppController implements Initializable {
             setStatus("Sample text loaded");
         } catch (IOException e) {
             showError("Error", "Error loading sample text: " + e.getMessage());
-            LoggerService.error("Error loading sample text", e);
+            LoggerUtil.error("Error loading sample text", e);
         }
     }
 
@@ -356,7 +352,7 @@ public class RegexAppController implements Initializable {
             } catch (Exception e) {
                 Platform.runLater(() -> {
                     showError("Analysis Error", e.getMessage());
-                    LoggerService.error("Error generating text summary", e);
+                    LoggerUtil.error("Error generating text summary", e);
                 });
             } finally {
                 Platform.runLater(() -> showProgress(false));
@@ -407,7 +403,7 @@ public class RegexAppController implements Initializable {
             } catch (Exception e) {
                 Platform.runLater(() -> {
                     showError("Analysis Error", e.getMessage());
-                    LoggerService.error("Error calculating word frequency", e);
+                    LoggerUtil.error("Error calculating word frequency", e);
                 });
             } finally {
                 Platform.runLater(() -> showProgress(false));
@@ -444,7 +440,7 @@ public class RegexAppController implements Initializable {
             } catch (Exception e) {
                 Platform.runLater(() -> {
                     showError("Filter Error", e.getMessage());
-                    LoggerService.error("Error filtering lines", e);
+                    LoggerUtil.error("Error filtering lines", e);
                 });
             } finally {
                 Platform.runLater(() -> showProgress(false));

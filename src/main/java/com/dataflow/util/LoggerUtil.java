@@ -2,9 +2,9 @@ package com.dataflow.util;
 
 import java.util.logging.*;
 
-public class LoggerService {
+public class LoggerUtil {
 
-    private static final Logger LOGGER = Logger.getLogger(LoggerService.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(LoggerUtil.class.getName());
 
     static {
         LogManager.getLogManager().reset();

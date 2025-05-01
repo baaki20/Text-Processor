@@ -1,6 +1,5 @@
-package com.dataflow.text;
+package com.dataflow.service;
 
-import com.dataflow.regex.RegexService;
 import java.util.List;
 import java.util.Map;
 
