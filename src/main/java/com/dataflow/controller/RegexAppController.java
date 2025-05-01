@@ -200,7 +200,7 @@ public class RegexAppController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("About DataFlow");
         alert.setHeaderText("DataFlow - Regex & Text Processing Tool");
-        alert.setContentText("Version 1.0\n\nA powerful tool for regex operations, text processing, and data management.");
+        alert.setContentText("Version 1.0\n\nA powerful tool for regex operations, text processing, and data management.\n\nDeveloper: Abdul Baaki Hudu");
         alert.showAndWait();
     }
 
