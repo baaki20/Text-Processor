@@ -1,7 +1,9 @@
 package com.dataflow;
 
+import com.dataflow.model.TextRecord;
 import com.dataflow.regex.RegexService;
 import com.dataflow.file.FileProcessingService;
+import com.dataflow.service.DataManagementService;
 import com.dataflow.stream.StreamProcessingService;
 import com.dataflow.text.TextProcessingService;
 import com.dataflow.util.LoggerService;
@@ -21,6 +23,7 @@ public class MainApp {
         FileProcessingService fileProcessingService = new FileProcessingService();
         StreamProcessingService streamProcessingService = new StreamProcessingService();
         TextProcessingService textProcessingService = new TextProcessingService();
+        DataManagementService dataService = new DataManagementService();
 
         String inputText = "";
 
@@ -88,6 +91,34 @@ public class MainApp {
             System.out.println(modifiedText);
 
             LoggerService.info("Text processing (search & replace) completed.");
+
+            // === Requirement 7 Demo ===
+
+            // a) Create
+            TextRecord rec1 = new TextRecord("1", "Sample Snippet", "This is some text content.");
+            TextRecord rec2 = new TextRecord("2", "Pattern Result", "Matched pattern text here.");
+
+            dataService.addRecord(rec1);
+            dataService.addRecord(rec2);
+            LoggerService.info("Records added.");
+
+            // b) Update
+            rec2.setContent("Updated matched pattern text.");
+            dataService.updateRecord(rec2);
+            LoggerService.info("Record 2 updated.");
+
+            // c) Retrieve
+            TextRecord fetched = dataService.getRecord("1");
+            System.out.println("\nFetched Record:");
+            System.out.println(fetched);
+
+            // d) Delete
+            dataService.deleteRecord("1");
+            LoggerService.info("Record 1 deleted.");
+
+            // e) View All
+            System.out.println("\nAll Remaining Records:");
+            dataService.getAllRecords().forEach(System.out::println);
 
         } catch (IllegalArgumentException e) {
             LoggerService.error("Regex pattern error", e);
